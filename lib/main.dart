@@ -37,7 +37,7 @@ class Menu extends StatelessWidget {
           padding: EdgeInsets.all(20.0),
           child: Column(
             children: [
-              Example2(),
+              Example3(),
             ],
           ),
         ),
@@ -87,30 +87,33 @@ class Example2 extends StatelessWidget {
 class Example3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        RaisedButton(
-          onPressed: () {
-            print('Pickup button pressed.');
-          },
-          child: Text(
-            'Pickup',
+    return SizedBox(
+      height: 50.0,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          RaisedButton(
+            onPressed: () {
+              print('Pickup button pressed.');
+            },
+            child: Text(
+              'Pickup',
+            ),
           ),
-        ),
-        VerticalDivider(
-          width: 20.0,
-          thickness: 5.0,
-        ),
-        RaisedButton(
-          onPressed: () {
-            print('Delivery button pressed.');
-          },
-          child: Text(
-            'Delivery',
+          VerticalDivider(
+            width: 20.0,
+            thickness: 5.0,
           ),
-        )
-      ],
+          RaisedButton(
+            onPressed: () {
+              print('Delivery button pressed.');
+            },
+            child: Text(
+              'Delivery',
+            ),
+          )
+        ],
+      ),
     );
   }
 }
