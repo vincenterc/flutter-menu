@@ -37,7 +37,7 @@ class Menu extends StatelessWidget {
           padding: EdgeInsets.all(20.0),
           child: Column(
             children: [
-              Example1(),
+              Example2(),
             ],
           ),
         ),
@@ -70,14 +70,16 @@ class Example1 extends StatelessWidget {
 class Example2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        MenuItem('🍔', 'Burger'),
-        MenuItem('🌭', 'Hot Dog'),
-        MenuItem('🍟', 'Fries'),
-        MenuItem('🥤', 'Soda'),
-        MenuItem('🍦', 'Ice Cream'),
-      ],
+    return Expanded(
+      child: ListView(
+        children: [
+          MenuItem('🍔', 'Burger'),
+          MenuItem('🌭', 'Hot Dog'),
+          MenuItem('🍟', 'Fries'),
+          MenuItem('🥤', 'Soda'),
+          MenuItem('🍦', 'Ice Cream'),
+        ],
+      ),
     );
   }
 }
